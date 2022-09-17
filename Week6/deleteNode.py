@@ -21,21 +21,15 @@ def insertEnd(head, data):
   last.next =  new_node
   return head;
 def deleteNode(node):
-    printList(node)
-    if(node!=None):
-        temp=node
-        if(node.next==None):
-            node=None
-            temp=None
-        else:
-            while (node.next !=None):
-                flag=1
-                temp=node
-                node=node.next
-                temp.data=node.data
-            temp.next=None
-  
-        printList(node)
+   def deleteNode(node):
+    if(node==None or node.next==None):
+      return
+  temp=node
+  while (node.next !=None):
+    temp=node
+    node=node.next
+    temp.data=node.data
+  temp.next=None
 
 def main():
     t = int(input().strip());
