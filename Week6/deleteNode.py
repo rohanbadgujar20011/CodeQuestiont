@@ -23,7 +23,6 @@ def insertEnd(head, data):
 def deleteNode(node):
     printList(node)
     if(node!=None):
-        flag=0
         temp=node
         if(node.next==None):
             node=None
